@@ -1,0 +1,18 @@
+% Para adicionar uma imagem ou incluir um arquivo .tex você precisa 
+% adicionar \CWD
+% caminho relativo (ao documento principal) do diretório.
+% 
+% Exemplo:
+% \begin{figure}
+%   \includegraphics{\CWD/imagens/exemplo.pdf}
+% \end{figure}
+
+First, we observe that changing a cell more than once is not optimal:
+\begin{itemize}
+  \item if we change it an even number of times, the parity of a cell value remains the same as its original value
+  \item if we change it an odd number of times, the parity of the cell flips from odd to even or even to odd
+\end{itemize}
+
+Second, if the number of rows with odd parity equals the number of columns with odd parity, we can \underline{save} operations by \textit{pairing up} those rows and columns with odd parity. For each pair, change the cells at the intersection of the row and column numbers in the pair.  For instance, if the sets of rows with odd parity are $\{1, 4\}$ and the set of colums are $\{2, 4\}$, we can change cells at $(1, 2)$ and $(4, 4)$.
+
+If the numbers of rows and columns with odd parity are not the same, we greedily match as many pairs as possible. For the remaining unmatched rows (or columns), we match them with an arbitrary (but fixed) column.

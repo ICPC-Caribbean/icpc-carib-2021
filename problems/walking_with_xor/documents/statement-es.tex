@@ -1,0 +1,24 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{center}
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{center}
+
+Se tiene una lista $A$ de $n$ números enteros y un número entero $k$. Se desea llegar a la posición final de la lista partiendo de la primera posición y solo moviéndose hacia la derecha. Desde cualquier posición $i$ se puede ir a todas las posiciones $j$ tales que ($i < j \le n$ y $A_i \oplus A_j < k$), donde $\oplus$ denota la operación xor.\\
+
+Calcule cuántas formas diferentes existen de llegar a la posición $n$\textit{-ésima}. Dos formas son diferentes si existe al menos una posición que es visitada en una forma y no en la otra. Ya que la respuesta puede ser muy grande, imprima su valor módulo $10^9+7$.\\
+
+\inputdesc{La primera línea de la entrada contiene dos números enteros $n, k$ $(1 \le n \le 2 \cdot 10^5,0 \le k \le 2^{20})$.\\
+
+    La segunda línea de la entrada contiene $n$ números enteros $a_1, a_2,\hdots, a_n$ $(0 \le a_i \le 2^{20})$, donde $a_i$ es el valor de la $i$\textit{-ésima} posición de la lista.}
+
+
+\outputdesc{Imprima un número entero, el número de formas de llegar a la posición $n$\textit{-ésima} módulo $10^9+7$.}
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio

@@ -1,0 +1,25 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{center}
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{center}
+A new city has been founded! The city has $n$ houses, but no roads yet. The city council hired a construction company to build roads between the houses, so that one can go from any house to another by a road path. The cost of building a road is calculated depending on the value $a$ of each house. The cost of building the road between house $i$ and house $j$, is the absolute value of the difference between their values: $ \left| a_i - a_j \right|$. The council needs to minimize the total cost of building the roads.
+%
+% For input, use one of the following
+%
+
+\inputdesc{First line contains the integer $n$ $(1\le n \le 10^5)$, the amount of houses in the city.
+Second line contains $n$ integers separated by spaces $a_1, a_2,..., a_n$ $(1\le a_i\le 10^9)$, the value of each house.}
+%
+% For output, use one of the following
+%
+
+\outputdesc{Print on a single line the minimum total cost to connect the houses in the city.}
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio

@@ -1,0 +1,43 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{center}
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{center}
+
+You are given a tree with $n$ vertices numbered from $1$ to $n$ and rooted at vertex $1$. Initially, each vertex has a color $c_i$.\\
+
+It is needed to perform $q$ queries of the following types:\\
+
+\begin{enumerate}
+    \item Update the colors of all vertices in the subtree of vertex $v$. For each vertex of the subtree replace its color by the formula: $c_i = (c_i + 1) \; mod \; 64$. Where $x \; mod \; y$ stands for the remainder that results of dividing $x$ by $y$.
+    \item Count the number of vertices in the subtree of vertex $v$ with color $c$.
+\end{enumerate}
+
+%
+% For input, use one of the following
+%
+
+\inputdesc{First line contains two integers $n$ and $q$ $(1 \leq n, q \leq 10^5)$, the number of vertices in the tree and the number of queries to perform.\\
+
+    Second line contains $n$ integers $c_i$ $(0 \le c_i \le 63)$, the initial colors of the vertices.\\
+
+    Next $N-1$ lines contain two integers $a$ and $b$ $(1\le a,b\le n)$ representing the edges of the tree.\\
+
+    Last $q$ lines contain the description of queries in the format described below:\\
+    \begin{itemize}
+        \item[] $1$ $v$ : Update the colors of all vertices in the subtree of vertex $v$ $(1 \le v \le n)$.
+        \item[] $2$ $v$ $c$ : Count the number of vertices in the subtree of vertex $v$ $(1 \le v \le n)$ with color $c$ $(0 \le c\le 63)$.
+    \end{itemize}
+}
+%
+% For output, use one of the following
+%
+
+\outputdesc{Print the solution for each query of type $2$. All solutions should be printed on a separate line following the same order given in the input.}
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio

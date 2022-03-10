@@ -1,0 +1,39 @@
+# This is a sample test plan
+# the first column specifies the test group
+# the second column specifies the command to be executed
+
+# Use samples as tests
+1     ; copy documents/sample-1.in
+1     ; copy documents/sample-2.in
+1     ; copy documents/sample-3.in
+
+# Use generators
+2     ; generator.exe 200000 1048276 1048315
+2     ; generator.exe 199440 1048200 1048236
+2     ; generator.exe 198396 1047468 1047502
+2     ; generator.exe 198151 1046825 1046800
+2     ; generator.exe 197193 1046007 1046040
+2     ; generator.exe 196095 1045329 1045341
+2     ; generator.exe 195688 1044848 1044890
+2     ; generator.exe 195355 1044293 1044291
+2     ; generator.exe 195244 1043516 1043540
+2     ; generator.exe 194688 1043184 1043168
+2     ; generator.exe 193908 1043076 1043098
+2     ; generator.exe 193567 1042529 1042515
+2     ; generator.exe 193432 1041776 1041812
+2     ; generator.exe 192804 1041516 1041511
+2     ; generator.exe 191808 1040736 1040754
+2     ; generator.exe 191707 1039949 1039983
+2     ; generator.exe 191181 1039587 1039624
+2     ; generator.exe 190491 1039389 1039374
+2     ; generator.exe 190420 1038572 1038543
+2     ; generator.exe 189984 1038120 1038150
+2     ; generator.exe 200000 1048576 1048576
+2     ; generator.exe 200000 1048576 1048576
+2     ; generator.exe 200000 1048576 1048576
+2     ; generator.exe 200000 1048576 1048576
+2     ; generator.exe 200000 1048576 1048576
+
+# Edge cases
+3     ; copy attic/hand-1.in
+3     ; copy attic/hand-2.in

@@ -1,0 +1,40 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{center}
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{center}
+
+Dada una lista $A$ con $n$ números enteros positivos, usted puede cambiar hasta 2 elementos por los que desee.\\
+
+Su objetivo es maximizar la expresión:\\
+
+$$S = \sum_{i=1}^{n-1} A_i \oplus A_{i+1}$$
+
+donde el símbolo $\oplus$ representa la operación binaria \textit{xor} (or exclusivo).\\
+
+%
+% For input, use one of the following
+%
+
+\inputdesc{
+    La primera línea de entrada contiene el número entero $n$ $(2 \le n \le 10^5)$ que representa el tamaño de la lista. La segunda línea contiene los elementos de $A$ separados por espacio tal que $(0 \le A_i < 2^{30})$ para  $ i = 1, 2, \ldots, n$.
+}
+
+%
+% For output, use one of the following
+%
+
+\outputdesc{
+Imprima un único entero, el mayor valor de $S$ que se puede obtener.\\
+
+\textbf{Nota:} Los nuevos valores de $A$ deben permanecer en el rango $[0 \le A_i < 2^{30})$
+}
+
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio

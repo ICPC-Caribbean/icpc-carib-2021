@@ -1,0 +1,38 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{center}
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{center}
+
+You are given an array $A$ of $n$ integers and an integer $k$. You start on the first position and you can only move to the right. Formally if you are in the position $i$ you can go to all the positions $j$ such that ($i < j \le n$ and $A_i \oplus A_j < k$), where $\oplus$ denote the \textit{xor} operation (exclusive or).\\
+
+Count how many different ways there are to get to the $n$\textit{-th} position. Two ways are different if there exists at least one position that you visit in one way and not in the other. As the answer can be very large print it modulo $10^9+7$.\\
+
+%
+% For input, use one of the following
+%
+
+\inputdesc{ First line of the input contains two integers $n, k$ $(1 \le n \le 2 \cdot 10^5,0 \le k \le 2^{20})$.\\
+
+  Second line of the input contains $n$ integers $a_1, a_2,\cdots, a_n$ $(0 \le a_i \le 2^{20})$, where $a_i$ is the value of the $i$\textit{-th} position of the array.
+}
+
+% \inputdescline{an integer $N$ ($1 \le N \le 10^{100}$), representing whatever.}
+
+%
+% For output, use one of the following
+%
+
+\outputdesc{Print one integer, the numbers of ways to get to the $n$\textit{-th} position modulo $10^9+7$.
+}
+
+% \outputdescline{an integer indicating the number of eleven-multiple-anagrams of $N$.
+%   Because this number can be very large, output the remainder of dividing it by $10^9 + 7$.}
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio

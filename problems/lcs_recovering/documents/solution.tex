@@ -1,0 +1,80 @@
+To solve this problem we need to obtain some information from the \textit{LCS}
+matrix. The idea is to detect the pairs $(i, j)$ such that $A[i] = B[j]$ or
+$A[i] \neq B[j]$.
+
+But first, let's note the following property of any \textit{LCS} matrix:
+
+\begin{itemize}
+
+    \item Let $(a, b)$ and $(c, d)$ be two adjacent positions (by row, column
+        or diagonal) on a \textit{LCS} matrix $M$, then  $|M[a][b] - M[c][d]|
+        \le 1$.
+
+\end{itemize}
+
+The proof of this is simple, if $(a, b)$ and $(c, d)$ are on the same row or
+column, then in the DP transition only one character was added, so the
+\textit{LCS} could not increase; and similarly in the case where they are
+adjacent diagonally, in the DP transition one character was added to each
+string, so the \textit{LCS} could increase in at most one.
+
+So, with this and noting that the \textit{LCS} increases (or stays the same) on
+rows (from left to right) and columns (from top to bottom); there are only five
+cases we need to analyse on a \textit{LCS} matrix:
+
+\begin{enumerate}
+    \item
+        \begin{tabular}{|c|c|}
+            \hline
+            $x - 1$ & $x$ \\ \hline
+            $x$ & $x$ \\ \hline
+        \end{tabular}
+
+    \item
+        \begin{tabular}{|c|c|}
+            \hline
+            $x - 1$ & $x - 1$ \\ \hline
+            $x$ & $x$ \\ \hline
+        \end{tabular}
+
+    \item
+        \begin{tabular}{|c|c|}
+            \hline
+            $x - 1$ & $x$ \\ \hline
+            $x - 1$ & $x$ \\ \hline
+        \end{tabular}
+
+    \item
+        \begin{tabular}{|c|c|}
+            \hline
+            $x$ & $x$ \\ \hline
+            $x$ & $x$ \\ \hline
+        \end{tabular}
+
+    \item
+        \begin{tabular}{|c|c|}
+            \hline
+            $x - 1$ & $x - 1$ \\ \hline
+            $x - 1$ & $x$ \\ \hline
+        \end{tabular}
+\end{enumerate}
+
+Where $x = M[i][j]$.
+
+In the first, second and third case we don't get any information. In the fourth
+case, we know that $A[i] \neq B[j]$ because if not $M[i][j]$ would be $x + 1$;
+and in the fifth case we know that $A[i] = B[j]$.
+
+Now with this information, we create a graph $G$ connecting, with undirected
+edges, the node $i$ with the node $j + n$ if $A[i] = B[j]$ and compress that
+graph. Then we add undirected edges in a new graph $G'$ (this graph has number of
+connected components of $G$ nodes) from the component where node $i$ is to the
+component where node $j + n$ is if $A[i] \neq B[j]$ (all indexes start from 1).
+
+In this stage, the problem reduces to find a bipartition on this graph $G'$
+(note that this graph is bipartite, because we always connected indexes of $A$
+to indexes of $B$), but we need to do this processing each node from $1$ to $n
++ m$ coloring with $0$ first, to obtain the lexicographically smallest
+solution.
+
+The time complexity is $O(n \cdot m)$.

@@ -1,0 +1,30 @@
+# This is a sample test plan
+# the first column specifies the test group
+# the second column specifies the command to be executed
+
+# Use samples as tests
+1     ; copy documents/sample-1.in
+1     ; copy documents/sample-2.in
+
+# Small n tests coordinates
+2     ; generator.exe 100 50 200 1000
+2     ; generator.exe 100 60 400 1000
+2     ; generator.exe 100 70 1000 1000
+2     ; generator.exe 100 80 10000 1000
+
+# Moderate n tests with big coordinates and lots of queries
+3     ; generator.exe 5000 3000 10000 300000000 
+3     ; generator.exe 8000 7000 10000 300000000
+3     ; generator.exe 10000 8000 10000 300000000
+
+# Maximum constrains
+4     ; generator.exe 100000 100000 10000 300000000
+4     ; generator.exe 100000 80000 10000 300000000 
+4     ; generator.exe 100000 60000 10000 300000000
+
+# Line generator (only to points given)
+5     ; generator_line.exe 100 1000000
+5     ; generator_line.exe 10000 1000000
+
+# Hand simple test case for just one given point
+6     ; copy attic/hand-1.in

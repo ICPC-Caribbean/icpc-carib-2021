@@ -1,0 +1,38 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{center}
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{center}
+
+El Granjero Juan (GJ) está enseñando a sus vacas los números binarios y ellas aprendieron rápidamente que los números binarios solo contienen los dígitos \textbf{0} y \textbf{1}. GJ estaba muy feliz con los resultados obtenidos y decidió enseñarles a las vacas cómo crear matrices binarias cuadradas. Sin embargo, las vacas se aburrieron después de la segunda clase. El Granjero Juan se puso un poco triste y pensó, qué pasa si le enseño a mis vacas a codificar matrices binarias con otros símbolos?\\
+
+El Granjero Juan sabe que sus vacas no soy muy inteligentes. Por esta razón, él definió dos reglas simples para codificar matrices binarias:\\
+
+\begin{enumerate}
+	\item El bit más frecuente se codificará con el símbolo \textbf{`*'} y el menos frecuente se codificará con el símbolo \textbf{`o'}.
+	\item En caso de empate en la frecuencia, el bit que se encuentra en la esquina superior izquierda de la matriz será codificado con el símbolo \textbf{`*'} y el bit complementario será codificado con el símbolo \textbf{`o'}.
+\end{enumerate}
+
+Aparentemente las vacas comprendieron las reglas. Sin embargo, el Granjero Juan no está seguro y desea evaluar las habilidades de las vacas. Escriba un programa para codificar una matriz binaria cuadrada utilizando las reglas propuestas por el Granjero Juan.
+
+%
+% For input, use one of the following
+%
+
+\inputdesc{La primera línea de la entrada contiene un entero $n$ ($1 \leq n \leq 100$) que representa la dimensión de la matriz. Las siguientes $n$ líneas contienen $n$ símbolos binarios \textbf{`0'} o \textbf{`1'} sin espacios.}
+
+%\inputdescline{an integer $N$ ($1 \le N \le 10^{100}$), representing whatever.}
+
+%
+% For output, use one of the following
+%
+
+\outputdesc{La salida contiene la matriz obtenida con el mecanismo de codificación propuesto por el Granjero Juan.}
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio

@@ -1,0 +1,27 @@
+# This is a sample test plan
+# the first column specifies the test group
+# the second column specifies the command to be executed
+
+# Use samples as tests
+1     ; copy documents/sample-1.in
+1     ; copy documents/sample-2.in
+
+# Use generators
+2     ; gen_random.exe random n=1:10 M=10
+2     ; gen_random.exe random n=1:10 M=100
+2     ; gen_random.exe random n=~50 M=1000000000
+2     ; gen_random.exe random n=~50 M=1000000000
+2     ; gen_random.exe circle n=20 r=100
+2     ; gen_random.exe circle n=20 r=1000
+
+# Large
+3     ; gen_random.exe random n=1000:2000 M=1000000000
+3     ; gen_random.exe random n=1000:2000 M=1000000000
+3     ; gen_random.exe circle n=1000:2000 r=1000000000
+3     ; gen_random.exe circle n=1000:2000 r=1000000000
+3     ; gen_random.exe circle n=1000:2000 r=1000000000
+
+# Max test
+4     ; gen_random.exe random n=2000 M=1000000000
+4     ; gen_random.exe random n=2000 M=1000000000
+4     ; gen_random.exe circle n=2000 r=1000000000

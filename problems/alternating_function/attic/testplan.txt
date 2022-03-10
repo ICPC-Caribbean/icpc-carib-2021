@@ -1,0 +1,17 @@
+# This is a sample test plan
+# the first column specifies the test group
+# the second column specifies the command to be executed
+
+# Use samples as tests
+1     ; copy documents/sample-1.in
+1     ; copy documents/sample-2.in
+
+# Use generators
+2     ; gen_random.exe t=100000 p=20 k=20 m=20
+2     ; gen_random.exe t=100000 p=1000000 k=1000 m=1000
+2     ; gen_random.exe t=100000 p=1000 k=1000000 m=1000
+2     ; gen_random.exe t=100000 p=10 k=10 m=1000000000
+
+# Large
+3     ; gen_random.exe t=100000 p=100 k=100 m=100000000000000000
+3     ; gen_random.exe t=100000 p=100000000000000000 k=100000000000000000 m=100000000000000000

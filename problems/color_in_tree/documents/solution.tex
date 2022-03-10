@@ -1,0 +1,45 @@
+% Para adicionar uma imagem ou incluir um arquivo .tex você precisa 
+% adicionar \CWD
+% caminho relativo (ao documento principal) do diretório.
+% 
+% Exemplo:
+% \begin{figure}
+%   \includegraphics{\CWD/imagens/exemplo.pdf}
+% \end{figure}
+
+In this problem you have a tree with N vertices numbered from 1 to N and rooted at vertex 1. Initially, each vertex has a color $c_i$. The problem ask you to perform Q queries of the following types:
+
+\begin{enumerate}
+	\item Update the colors of all vertices in the subtree of vertex $v$. For each vertex of the subtree replace its color by the formula: $c_i = (c_i + 1) \; mod \; 64$. Where $x \; mod \; y$ stands for the remainder that results of dividing $x$ by $y$.
+	\item Count the number of vertices in the subtree of vertex $v$ with color $c$.
+\end{enumerate}
+
+Due to the input sizes for N and Q, it is not possible the simulation of queries with a naive method. It would take $\mathcal{O}(N \cdot Q)$ which is not enough to pass the time limit for this problem.\\
+
+In this kind of problems where we need to apply an operation to a subtree, we can transform the rooted tree into an array by running a depth-first search and storing the discovery and finish times of each vertex. It works because during a depth-first search traversal of a subtree x, the descendant vertices of subtree rooted at x will be visited as a contiguous sequence and stored at the range $[discovery[x] ..finish[x]]$ of the array.
+
+For example, suppose you have a tree with the following edges: 1-2, 1-3, 1-4, 3-7, 3-5 and 3-6. After running a depth-first search starting at vertex 1, we obtain the following sequence of vertices, colors, discovery and finish times:\\
+vertices: \{1, 2, 3, 7, 5, 6, 4\}\\
+colors: \{1, 2, 3, 1, 1, 1, 1\}\\
+discovery: \{1, 2, 3, 7, 5, 6, 4\}\\
+finish: \{7, 2, 6, 7, 5, 6, 4\}\\
+
+Once we have this information, if we need to check colors for a subtree rooted at x, we check the range $[discovery[x]..finish[x]]$ of array \textit{colors}. For example, the info of subtree rooted at 3 is in the range $[discovery[3]..finish[3]]$ of the arrays vertices $(3, 7, 5, 6)$ and colors $(3, 1, 1, 1)$ and these are the correct values for this subtree.
+
+At this point, the original problem was reduced to the following problem: Given an array A of integer numbers, you can perform 2 operations:
+
+\begin{enumerate}
+	\item Replace all the elements of the range $[x,y]$ by the formula: $new \textunderscore value = (current \textunderscore value + 1) \; mod \; 64$. Where $x \; mod \; y$ stands for the remainder that results of dividing $x$ by $y$.
+	\item Count how many numbers of the range $[x,y]$ have value equals $c$.
+\end{enumerate}
+
+The new problem can be solved with a segment tree and lazy propagation to answer both kinds of queries in $\mathcal{O}(\log N)$. Each node of the segment tree stores the frequency of each color in the range $(int \; colors[MAX \textunderscore COLORS])$, the starting color of the range if we handle each update operation as a left rotation of the array \textit{colors} $(int \; start)$ and the number of pending updates $(int \; lazy)$ to apply lazy propagation.
+
+The solution has three steps. The first one is the preprocessing stage with the depth-first search algorithm $(\mathcal{O}(N))$ in order to compute discovery and finish times. The second step is the construction of the segment tree $(\mathcal{O}(N))$. The final step is the processing of queries $(\mathcal{O}(Q \log N))$.
+
+\begin{equation*} \label{eq1}
+\begin{split}
+T(n) & = \mathcal{O}(N) + \mathcal{O}(N) + \mathcal{O}(Q \log N) \\
+     & = \mathcal{O}(Q \log N)
+\end{split}
+\end{equation*}

@@ -1,0 +1,33 @@
+# This is a sample test plan
+# the first column specifies the test group
+# the second column specifies the command to be executed
+
+# Use samples as tests
+1     ; copy documents/sample-1.in
+1     ; copy documents/sample-2.in
+1     ; copy documents/sample-3.in
+
+# Small tests
+2     ; gen_random.exe random n=1:10 m=1:10 MAX=10
+2     ; gen_random.exe random n=1:10 m=1:10 MAX=1000
+2     ; gen_random.exe triangle_first n=1:10 m=1:10 MAX=10
+2     ; gen_random.exe triangle_first n=1:10 m=1:10 MAX=1000
+
+# Large tests
+3     ; gen_random.exe random n=10000:100000 m=10000:100000 MAX=100
+3     ; gen_random.exe random n=10000:100000 m=10000:100000 MAX=1000
+3     ; gen_random.exe random n=10000:100000 m=10000:100000 MAX=100000
+3     ; gen_random.exe random n=10000:100000 m=10000:100000 MAX=100000
+3     ; gen_random.exe triangle_first n=10000:100000 m=10000:100000 MAX=1000
+3     ; gen_random.exe triangle_first n=10000:100000 m=10000:100000 MAX=100
+3     ; gen_random.exe triangle_first n=10000:100000 m=10000:100000 MAX=100000
+3     ; gen_random.exe triangle_first n=10000:100000 m=10000:100000 MAX=100000
+
+# Max tests
+4     ; gen_random.exe random n=100000 m=100000 MAX=10
+4     ; gen_random.exe random n=100000 m=100000 MAX=1000
+4     ; gen_random.exe random n=100000 m=100000 MAX=1000000
+4     ; gen_random.exe random n=100000 m=100000 MAX=1000000000
+4     ; gen_random.exe triangle_first n=100000 m=100000 MAX=1000
+4     ; gen_random.exe triangle_first n=100000 m=100000 MAX=1000000
+4     ; gen_random.exe triangle_first n=100000 m=100000 MAX=1000000000

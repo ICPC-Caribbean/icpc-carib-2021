@@ -1,0 +1,18 @@
+First of, we can change the condition of obtaining a number $x$ to $\sum x_i
+\le k$ and $x_i \ge 2$, this is because we get the same product $x$ and we can
+complete the remaining $x_i$'s with ones.
+
+Now for an $x$, we need to obtain the smallest sum of $x_i$ such that its
+product is $x$. The key observation here is that every $x_i$ must be a prime
+number, because if one of them were composite then there exists integers $a, b
+\ge 2$ such that $x_i = a \cdot b$, but $a + b \le a \cdot b$ holds for $a, b
+\ge 2$, which means that we can obtain a smaller sum if we put $a$ and $b$
+instead of $x_i$. We can apply this reasoning until all $x_i$ are primes.
+
+To proof the previous equation, suppose WLOG that $a \le b$, then $a + b \le 2
+\cdot b$ and as $a, b \ge 2$ it follows that $2 \cdot b \le a \cdot b$, and
+hence $a + b \le 2 \cdot b \le a \cdot b$.
+
+Finally the solution is, iterate every $x$ from $1$ to $n$, get their prime
+factors (with multiplicity), add them and check that their sum is less than or
+equal to $k$, if it is, add $1$ to the answer.

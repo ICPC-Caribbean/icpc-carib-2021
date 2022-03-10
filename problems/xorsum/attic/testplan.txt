@@ -1,0 +1,26 @@
+# This is a sample test plan
+# the first column specifies the test group
+# the second column specifies the command to be executed
+
+# Use samples as tests
+1     ; copy documents/sample-1.in
+1     ; copy documents/sample-2.in
+
+# Use generators
+2 	  ; gen_force_change_2_consecutive.exe n=10
+2     ; gen_random.exe random n=10:20 M=100:200
+2     ; gen_random.exe random n=10:20 M=100:200
+2     ; gen_random.exe random n=100:200 M=100:200
+2     ; gen_random_with_2_consecutive_zeroes.exe random n=100:200 M=100:200
+2     ; gen_random.exe random n=100:200 M=1073741823
+2     ; gen_random_with_2_consecutive_zeroes.exe random n=100:200 M=1073741823
+2     ; gen_random.exe random n=1000:2000 M=1073741823
+2     ; gen_consecutive.exe n=1000:2000 M=1073741823
+2 	  ; gen_force_change_2_consecutive.exe n=1000:2000
+
+# Max
+3     ; gen_random.exe random n=100000 M=1073741823
+3     ; gen_random.exe random n=100000 M=1073741823
+3     ; gen_consecutive.exe n=100000 M=1073741823
+3     ; gen_random_with_2_consecutive_zeroes.exe random n=100000 M=1073741823
+3 	  ; gen_force_change_2_consecutive.exe n=100000

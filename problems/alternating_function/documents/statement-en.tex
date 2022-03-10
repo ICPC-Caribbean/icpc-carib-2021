@@ -1,0 +1,37 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{center}
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{center}
+
+Let $h$ be a function defined on the set of all positive integers such that $h(n)=(-1)^n \cdot n \cdot p + k$, $(1 \le p,k \le 10^{17})$.\\
+
+Find the minimum positive integer $x$ such that $h(x) \ge m$, $(1 \le m \le 10^{17})$. It can be proven that such $x$ exists.\\
+
+
+
+%
+% For input, use one of the following
+%
+
+\inputdesc{The first line of the input contains a single integer $t$ $(1 \le t \le 10^5)$, representing the number of test cases.\\
+
+    The following $t$ lines contain three spaced separated integers $p$, $k$, $m$, describing each test case.
+}
+%
+% For output, use one of the following
+%
+
+\outputdesc{For each test case, print a line with one integer, the minimum positive integer $x$ such that $h(x) \ge m$.
+}
+
+
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio
+

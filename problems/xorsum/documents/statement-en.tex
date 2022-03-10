@@ -1,0 +1,41 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{center}
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{center}
+
+
+Given a list $A$ with $n$ positive integers. You are allowed to change at most two elements from the list into any two elements of your choice.\\
+
+Your goal is to maximize the formula:\\
+
+$$S = \sum_{i=1}^{n-1} A_i \oplus A_{i+1}$$
+
+where the symbol $\oplus$ stands for the \textit{xor} operation (exclusive or).\\
+
+%
+% For input, use one of the following
+%
+
+\inputdesc{
+    First line of input contains an integer $n$ $(2 \le n \le 10^5)$, the size of the list. Second line contains the elements of $A$ separated by space such that $(0 \le A_i < 2^{30})$ for $i = 1, 2, \ldots, n$.
+}
+
+%
+% For output, use one of the following
+%
+
+\outputdesc{
+Print a single integer, the maximum value of $S$ you can get.\\
+
+\textbf{Note:} The new values of $A$ must remain withing the range $[0, 2^{30})$.
+}
+
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio

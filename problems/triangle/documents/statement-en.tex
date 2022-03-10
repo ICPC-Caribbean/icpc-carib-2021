@@ -1,0 +1,33 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{center}
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{center}
+You are given the coordinates of $n$ points and a set of $m$ isosceles right triangles. The legs (shortest sides) of the triangles are parallel to the coordinate axes.\\
+
+For each triangle, you have to find how many of the given points it contains.\\
+
+%
+% For input, use one of the following
+%
+
+
+\inputdesc{First line contains two positive integers $n$ and $m$ $(1 \leq n,m \leq 10^5)$, the numbers of points and the number of triangles respectively.\\
+
+    Next $n$ lines contain two integers $x$ $y$ $(-10^9\le x,y \le 10^9)$, the coordinates of each of the given points.\\
+
+    Next $m$ lines contain six integers $x_1\ y_1\ x_2\ y_2\ x_3\ y_3$ $(-10^9\le x_1,y_1,x_2,y_2,x_3,y_3 \le 10^9)$,
+    the coordinates of the vertices of the given triangles.
+}
+%
+% For output, use one of the following
+%
+
+\outputdesc{Print $m$ numbers in separated lines, the number of points on each triangle.}
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio

@@ -1,0 +1,65 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{center}
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{center}
+
+
+Decimos que una matriz de números enteros es ``par'' si las sumas de los números por cada fila  y cada columna son números pares.\\
+
+En los siguientes ejemplos, las matrices $A$, $B$ y $C$ son ``pares''. La matriz $D$ no es ``par'' debido a que su segunda columna y su última fila tienen sumas impares. La matriz $E$ no es ``par'' ya que sus dos columnas tienen sumas impares.\\
+
+\begin{equation*}
+  A =
+  \begin{bmatrix}
+    2
+  \end{bmatrix},
+  B =
+  \begin{bmatrix}
+    1 & 3 & 0 \\
+    3 & 5 & 6
+  \end{bmatrix},
+  C =
+  \begin{bmatrix}
+    3 & 1 \\
+    1 & 9
+  \end{bmatrix},
+  D =
+  \begin{bmatrix}
+    1 & 1 & 8 \\
+    3 & 0 & 7 \\
+    0 & 4 & 3
+  \end{bmatrix},
+  E =
+  \begin{bmatrix}
+    7 & 3
+  \end{bmatrix}
+\end{equation*}
+
+Se tiene una matriz $A$, y se desea obtener una matriz ``par'' ejecutando la \textbf{mínima} cantidad de veces la siguiente operación:\\
+\begin{itemize}
+  \item Seleccionar una celda de la matriz e incrementar su valor en 1. Se permite seleccionar la misma celda en operaciones distintas.
+\end{itemize}
+
+Imprima cualquier matriz final ``par'' que resulte de ejecutar la operación anterior la menor cantidad de veces posible.
+
+%
+% For input, use one of the following
+%
+
+\inputdesc{La primera línea contiene dos números enteros $r$ y $c$ $(1 \le r, c \le 50)$. Las siguientes $r$ líneas definen la matriz $A$. Cada línea contiene $c$ números enteros con valores entre $0$ a $100$. El $j$\textit{-ésimo} número de la $i$\textit{-ésima} línea corresponde a la celda $A_{i, j}$ de la matriz.}
+
+%
+% For output, use one of the following
+%
+
+\outputdesc{Imprima cualquier matriz ``par'' resultante en el mismo formato indicado en la sección de entrada: $r$ filas con $c$ números en cada fila.}
+
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio

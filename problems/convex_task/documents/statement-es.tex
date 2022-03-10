@@ -1,0 +1,48 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{center}
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{center}
+
+Dado un conjunto $P$ de $n$ puntos en el plano, se desea saber si un punto $w$ se puede expresar como combinación lineal de los puntos de $R \subseteq P$, es decir, si:\\
+
+$$w = \sum_{i=1}^{|R|} {\mu}_i \cdot R_i$$\\
+
+tal que ${\mu}_i \ge 0$ para $i = 1,2,..., |R|$ y además $\displaystyle\sum_{i=1}^{|R|} {\mu}_i = 1 $.\\
+
+Para cada punto $w$ debe encontrar un conjunto $R$ con \textbf{a lo sumo 5} elementos ($|R| \le 5$) tal que los coeficientes satisfagan la condición anterior, o decir que es imposible.\\
+
+\textbf{Nota:}
+\begin{itemize}
+	\item Sea $p$ un punto de la forma $(x, y)$ y $c$ un escalar. El producto $c \cdot p$ se define como el punto $s = (c \cdot x, c \cdot y)$.
+	\item Sean $p_1 = (x_1, y_1)$ y $p_2 = (x_2, y_2)$ dos puntos. La suma $p_1 + p_2$ se define como el punto $s = (x_1 + x_2, y_1 + y_2)$.
+\end{itemize}
+
+
+\inputdesc{
+	La primera línea de entrada contiene un número entero $n$ $(1 \leq n \leq 10^5)$, el número de puntos de $P$.\\
+
+	Las próximas $n$ líneas contienen dos enteros $x_i, y_i$ $(0 \le x_i, y_i \le 10^9)$, las coordenadas del $i$\textit{-ésimo} punto.\\
+
+	La siguiente línea contiene un número entero $q$ $(1 \le q \le 10^4)$, la cantidad de puntos $w$ a analizar.\\
+
+	Las restantes $q$ líneas contienen dos números enteros $x_w, y_w$ $(0 \le x_w, y_w \le 10^9)$, las coordenadas de cada punto $w$.\\
+}
+
+\outputdesc{
+	Para cada punto $w$:\\
+	\begin{itemize}
+		\item En caso de que no exista solución imprimir la palabra ``impossible'' (sin las comillas).
+		\item En caso de existir solución imprimir una línea con un número $m$ indicando la cantidad de elementos del conjunto $R$ encontrado.
+	\end{itemize}
+
+	Luego imprima $m$ líneas, cada una con un entero $i$ indicando que el $i$\textit{-ésimo} punto de $P$ pertenece a $R$, seguido por un número real $\mu_i$ indicando su coeficiente.\\
+
+
+	\textbf{Nota}: Su solución será considerada correcta si cumple con las restricciones del problema y además el cuadrado de la distancia entre $w$ y el punto $w' = \displaystyle\sum_{i=1}^{|R|} {\mu}_i \cdot R_i$ obtenido no excede $10^{-5}$.
+}
+
+\sampleio

@@ -1,0 +1,31 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{center}
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{center}
+
+Alice y Bob deciden probar un nuevo juego de mesa. El juego dispone de un tablero de dimensiones $n \cdot m$, de $c$ monedas ubicadas en casillas específicas del tablero y de un número entero $r$ ($1 \le r \le m$), que es escogido por Alice y Bob al inicio de cada partida.\\
+
+El juego de mesa es un juego por turnos, y por cortesía de Bob, Alice es la primera jugadora en todas las partidas. En su turno, el jugador debe escoger una moneda ubicada en una posición $(i, j)$ tal que $(1 \le i \le n, 1 \le j \le r)$ y moverla hacia otra casilla $(i, k)$ de la misma fila del tablero que se encuentre hacia la izquierda de $(i, j)$, no importa si esta nueva casilla ya contiene otra moneda. El jugador que no pueda realizar un movimiento, pierde.\\
+
+Alice y Bob deciden jugar $q$ partidas, se quiere determinar el ganador de cada partida, sabiendo que ambos jugadores juegan de forma óptima.
+
+\inputdesc{
+
+    La primera línea contiene cuatro números enteros $n$, $m$, $c$, and $q$ $(1 \leq n , m, c, q \leq 10^5)$, que representan las dimensiones del tablero, la cantidad de monedas y la cantidad de partidas, respectivamente.\\
+
+    Las siguientes $c$ líneas contienen dos números enteros $x, y$ ($1 \leq x \leq n$, $1 \leq y \leq m$) cada una, la casilla donde está ubicada la $i-$\textit{ésima} moneda.\\
+
+    Las siguientes $q$ líneas contienen un número entero $r$ ($1 \leq r \leq m$), el número entero escogido por Alice y Bob para cada partida.
+
+}
+
+\outputdesc{Para cada una de las $q$ partidas, imprima el ganador de la partida, ``Alice'' o ``Bob''.}
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio

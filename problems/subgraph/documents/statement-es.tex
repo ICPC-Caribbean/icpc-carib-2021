@@ -1,0 +1,51 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{center}
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{center}
+
+
+Se tiene un grafo ponderado no dirigido con $V$ vértices y $E$ aristas. Cada vértice tiene asociado un peso $p_1, p_2, \ldots , p_V$.\\
+
+Encuentre un subconjunto $S$ de vértices con la puntuación máxima, donde la puntuación se define como la suma de los pesos de todos los vértices de $S$ y los pesos de todas las aristas entre vértices de $S$, dividida por el número de vértices de $S$:\\
+
+\begin{equation*}
+    score(S) = \frac{\sum\limits_{u \in S} {p_u} + \sum\limits_{\substack{(u, v, w) \in E \\ u, v \in S}} {w}}{\lvert S \rvert}
+\end{equation*}
+
+
+%
+% For input, use one of the following
+%
+
+\inputdesc{
+    La primera línea contiene 2 enteros $V$ ($1 \le V \le 100$) y $E$ ($1 \le E \le 1000$).\\
+
+    La segunda línea contiene $V$ enteros $p_1, p_2, \ldots , p_V$ ($0 \le p_i \le 1000$).\\
+
+    Las próximas $E$ líneas, cada una contiene 3 enteros $u_i, v_i, w_i$ ($1 \le u_i \ne v_i \le V$, $1 \le w_i \le 1000$, $1 \le i \le E$) denotanto una arista entre los nodos $u_i$ y $v_i$ con peso $w_i$.\\
+
+    \textbf{Se garantiza que habrá a lo sumo una arista no dirigida entre cada par de vértices.}
+}
+
+%
+% For output, use one of the following
+%
+
+\outputdesc{
+    Imprima el subconjunto de vértices $S$ con la puntuación máxima de la siguiente manera:\\
+
+    Una línea con un entero $\lvert S \rvert$, la cantidad de vértices de $S$.\\
+
+    Una línea con $\lvert S \rvert$ enteros separados por espacios: los vértices de $S$, en cualquier orden.\\
+
+    \textbf{Si existe más de un subconjunto con puntuación máxima, imprima cualquiera de ellos.}
+}
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio

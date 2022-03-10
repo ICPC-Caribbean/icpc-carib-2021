@@ -1,0 +1,23 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{center}
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{center}
+
+
+Se tienen $n$ puntos en un plano. Cada punto se eliminará con probabilidad $0.5$ de forma independiente. Determina el valor esperado del área del \textit{convex hull} de los puntos restantes.\\
+
+\inputdesc{La primera línea contiene un número entero $n$ $(1\le n\le 2000)$.\\
+
+    Las siguientes $n$ líneas contienen los pares de números enteros $x_i$, $y_i$ $(-10^9\le x_i, y_i\le 10^9)$, las coordenadas del $i$\textit{-ésimo} punto. No existen 3 puntos alineados.
+}
+
+\outputdesc{Imprima el valor esperado del área del \textit{convex hull}. Imprima el valor $P \cdot Q^{-1} \mod (10^9+7)$, donde $P$ y $Q$ son primos relativos y $\frac{P}{Q}$ es la respuesta al problema.}
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio

@@ -1,0 +1,30 @@
+# This is a sample test plan
+# the first column specifies the test group
+# the second column specifies the command to be executed
+
+# Use samples as tests
+1     ; copy documents/sample-1.in
+1     ; copy documents/sample-2.in
+1     ; copy documents/sample-3.in
+
+# Use generators
+2     ; generator.exe 2 2
+2     ; generator.exe 4 3
+2     ; generator.exe 3 3
+2     ; generator.exe 183 346725550
+2     ; generator.exe 139 758285846
+2     ; generator.exe 258 729606984
+2     ; generator.exe 221 537087141
+2     ; generator.exe 235 780436295
+2     ; generator.exe 2 1000000000
+2     ; generator.exe 3 1000000000
+2     ; generator.exe 500 1000000000
+2     ; generator.exe 500 1000000000
+2     ; generator.exe 500 1000000000
+
+3     ; generator.exe 100000 100
+3     ; generator.exe 100000 1000000
+3     ; generator.exe 100000 1000000000
+3     ; generator.exe 98765 987654321
+
+

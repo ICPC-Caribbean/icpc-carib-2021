@@ -1,0 +1,46 @@
+The \textit{LCS} (Longest Common Subsequence) algorithm of two binary strings $A$ and $B$ returns a matrix as follows:\\
+
+\begin{minipage}{12cm}
+    \begin{verbatim}
+    LCS(A, B):
+        n = len(A)
+        m = len(B)
+        M = Array[n, m] // the matrix is full of zeroes
+
+        for i = 1 to n
+            for j = 1 to m
+                if A[i] == B[j]
+                    M[i][j] = M[i-1][j-1] + 1
+                else
+                    M[i][j] = max(M[i-1][j], M[i][j-1])
+        return M
+  \end{verbatim}
+\end{minipage}\\
+
+
+
+Given a matrix $M$, find the smallest among all possible pairs of binary strings $A$ and $B$ such that \textit{LCS(A, B)} returns $M$. A pair $(A, B)$ is smaller than $(C, D)$ if $(A+B)$ is lexicographically smaller than $(C+D)$ where the operator $+$ denotes string concatenation.
+%
+% For input, use one of the following
+%
+
+\inputdesc{First line of the input contains two integers $n$ and $m$ $(1 \le n, m \le 2 \cdot 10^3)$, the number of rows and the number of columns in the matrix.\\
+
+    Next $n$ lines contain $m$ integers each. The $j$\textit{-th} element in the $i$\textit{-th} line is $M[i][j]$.\\
+
+    It is guaranteed that there exists at least two binary strings such that the \textit{LCS} algorithm returns the given matrix.\\
+
+    Please note that the given matrix differs from the one at the pseudocode by not having the row number 0 and column number 0 for simplicity.
+}
+
+%
+% For output, use one of the following
+%
+
+\outputdesc{Print one binary string $A$ of length $n$ on the first line and one binary string $B$ of length $m$ on the second line, such that the pair $(A, B)$ is the smallest lexicographically where the \textit{LCS} algorithm returns the given matrix.}
+
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio

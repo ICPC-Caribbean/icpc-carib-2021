@@ -1,0 +1,37 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{center}
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{center}
+
+Se tiene un árbol con $n$ vértices numerados de $1$ a $n$ y con raíz en el vértice $1$. Inicialmente, cada vértice tiene un color $c_i$.\\
+
+Se deben realizar $q$ operaciones de los siguientes tipos:\\
+
+\begin{enumerate}
+    \item Actualizar el color de todos los vértices del subárbol del vértice $v$. Para cada vértice del subárbol, reemplazar su color dada la siguiente fórmula: $c_i = (c_i + 1) \; mod \; 64$. Donde $x \; mod \; y$ devuelve el resto que se obtiene cuando se divide $x$ entre $y$.
+    \item Contar la cantidad de vértices en el subárbol del vértice $v$ con color $c$.
+\end{enumerate}
+
+%
+% For input, use one of the following
+%
+
+\inputdesc{La primera línea contiene dos números enteros $n$ y $q$ $(1 \leq n, q \leq 10^5)$, el número de vértices en el árbol y el número de operaciones a realizar. La segunda línea contiene $n$ números enteros $c_i$ $(0 \le c_i \le 63)$, los colores iniciales de cada vértice. Las siguientes $n-1$ líneas contienen dos número enteros $a$ y $b$ $(1\le a,b\le n)$ que representan las aristas del árbol. Las siguientes $q$ líneas contienen la descripción de las operaciones en el formato descrito a continuación:\\
+    \begin{itemize}
+        \item[] $1$ $v$ : Actualizar el color de todos los vértices del subárbol del vértice $v$ $(1 \le v \le n)$.
+        \item[] $2$ $v$ $c$ : Contar la cantidad de vértices en el subárbol del vértice $v$ $(1 \le v \le  n)$ con color $c$ $(0 \le c\le 63)$.
+    \end{itemize}
+}
+%
+% For output, use one of the following
+%
+
+\outputdesc{Imprima el resultado para cada operación de tipo $2$. Todas las soluciones deben imprimirse en líneas separadas siguiendo el mismo orden dado en la entrada.}
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio

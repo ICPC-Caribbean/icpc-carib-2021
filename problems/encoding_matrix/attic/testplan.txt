@@ -1,0 +1,29 @@
+# This is a sample test plan
+# the first column specifies the test group
+# the second column specifies the command to be executed
+
+# Use samples as tests
+1     ; copy documents/sample-1.in
+1     ; copy documents/sample-2.in
+
+# Use generators
+2     ; gen_random.exe 1
+2     ; gen_random.exe 10
+2     ; gen_random.exe 20
+2     ; gen_random.exe 30
+2     ; gen_random.exe 40
+2     ; gen_random.exe 50
+2     ; gen_random.exe 60
+2     ; gen_random.exe 70
+2     ; gen_random.exe 80
+2     ; gen_random.exe 90
+2     ; gen_random.exe 100
+
+# Generate matrix with the same frequence of bits
+3     ; gen_bits_equal_frequency.exe 2
+3     ; gen_bits_equal_frequency.exe 6
+3     ; gen_bits_equal_frequency.exe 10
+3     ; gen_bits_equal_frequency.exe 20
+3     ; gen_bits_equal_frequency.exe 40
+3     ; gen_bits_equal_frequency.exe 80
+3     ; gen_bits_equal_frequency.exe 100

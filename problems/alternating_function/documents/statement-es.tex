@@ -1,0 +1,37 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{center}
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{center}
+
+
+Sea $h$ una función definida en el conjunto de los números enteros positivos tal que $h(n)=(-1)^n \cdot n \cdot p + k$, $(1 \le p,k \le 10^{17})$.\\
+
+Halla el menor entero positivo $x$ tal que $h(x) \ge m$, $(1 \le m \le 10^{17})$. El número $x$ siempre existe.\\
+
+
+
+%
+% For input, use one of the following
+%
+
+\inputdesc{La primera línea de la entrada contiene un número entero $t$ $(1 \le t \le 10^5)$, la cantidad de casos de prueba.\\
+
+    Las siguientes $t$ líneas contienen 3 números enteros separados por espacios $p$, $k$, $m$, describiendo cada caso de prueba.
+}
+
+
+%
+% For output, use one of the following
+%
+
+\outputdesc{Para cada caso de prueba, imprima una línea con un número, el menor entero positivo $x$ tal que $h(x) \ge m$.
+}
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio

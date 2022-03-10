@@ -1,0 +1,46 @@
+Se tienen $n$ gatos y $n$ perros, numerados cada uno desde $1$ hasta $n$. Cada animal puede observar a otros gatos y perros. En particular, se sabe que:\\
+
+\begin{enumerate}
+  \item Cada \textbf{gato} observa exactamente a $a$ \textbf{perros} (es decir, $a$ números enteros distintos de $1$ a $n$).
+  \item Cada \textbf{perro} observa exactamente a $b$ \textbf{gatos} (es decir, $b$ números enteros distintos de $1$ a $n$).
+\end{enumerate}
+
+Algo muy malo pasará si un gato y un perro se observan entre sí al mismo tiempo, por lo que Koa la Koala ayudará a resolver esta situación. Ella tiene que determinar si es posible organizar qué animal mira cada cual cumpliendo que:\\
+
+\begin{itemize}
+  \item Se satisfacen (1.) y (2.)
+  \item no existe un par de \textbf{gato} y \textbf{perro} que se observen entre sí, esto es: no pueden existir números enteros $i$ y $j$ ($1 \le i, j \le n$) tal que el gato $i$ observe al perro $j$ y el perro $j$ observe al gato $i$.
+\end{itemize}
+
+¡Ayuda a Koa!
+
+\inputdesc{La primera línea de la entrada contiene el número entero $t$ $(1 \le t \le 100)$, el número de casos de prueba. A continuación $t$ casos de prueba.\\
+
+  La única línea de cada caso de prueba contiene los números enteros $n$, $a$ y $b$ ($1 \le n \le 100; 1 \le a, b \le n$).\\
+
+  Se garantiza que la suma de $n$, para todos los casos de prueba no excede el valor de $100$ ($\sum n \le 100$).\\
+}
+
+\outputdesc{Por cada caso de prueba:
+
+  Imprima ``Yes'' o ``No'' (sin comillas), dependiendo de si existe la distribución deseada.\\
+
+  Si la respuesta es ``Yes'':\\
+
+  \begin{itemize}
+    \item Entonces, exactamente $n$ líneas deben seguir, indicando los perros que son observados por cada gato.\\
+
+    \item La $i$-ésima ($1 \le i \le n$) línea debe consistir de exactamente $a$ números enteros distintos $w_1, w_2,\ldots, w_a$ ($1\le w_i \le n$) indicando que el gato $i$ observa a los perros $w_1, w_2, \ldots, w_a$. Estos números enteros pueden estar en cualquier orden.\\
+
+    \item Entonces, exactamente $n$ líneas deben seguir, indicando que gatos son observados por cada perro.\\
+
+    \item La $i$-ésima ($1 \le i \le n$) línea debe consistir de exactamente $b$ enteros distintos $m_1, m_2, \ldots, m_b$ ($1\le m_i \le n$) indicando que el perro $i$ observa a los gatos $m_1, m_2, \ldots, m_b$. Estos números enteros pueden estar en cualquier orden.\\
+
+  \end{itemize}
+
+  Si hay muchas distribuciones posibles, imprima cualquiera.
+}
+
+
+
+\sampleio

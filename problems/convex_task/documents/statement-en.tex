@@ -1,0 +1,49 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{center}
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{center}
+
+
+You are given a set $P$ with $n$ points in the plane. We want to know if a point $w$ can be written as a linear combination of points from $R$, where $R \subseteq P$, that is:\\
+
+$$w = \sum_{i=1}^{|R|} {\mu}_i \cdot R_i$$
+
+such that ${\mu}_i \ge 0$ for $i = 1,2,...,|R|$ and $\displaystyle\sum_{i=1}^{|R|} {\mu}_i = 1$. \\
+
+For each point $w$ you should find a set $R$ with \textbf{at most 5} elements ($|R| \le 5$) such that coefficients satisfy previous rule, or tell if such representation doesn't exist.\\
+
+\textbf{Notes:}
+\begin{itemize}
+	\item Let $p = (x, y)$ be a point and $c$ a real number. The product $c \cdot p$ is defined as point $s = (c \cdot x, c \cdot y)$.
+	\item Let $p_1 = (x_1, y_1)$ and $p_2 = (x_2, y_2)$ be two points. The sum $p_1 + p_2$ is defined as point $s = (x_1 + x_2, y_1 + y_2)$.
+\end{itemize}
+
+
+\inputdesc{
+	First line of input contains an integer $n$ $(1 \leq n \leq 10^5)$, the number of points in $P$.\\
+
+	Next $n$ lines contains two integers $x_i, y_i$ $(0 \le x_i, y_i \le 10^9)$, the coordinates of the $i$\textit{-th} point.\\
+
+	Next line contains an integer $q$ $(1 \le q \le 10^4)$, representing the amount of points $w$ to answer.\\
+
+	The remaining $q$ lines contains two integers $x_w, y_w(0 \le x_w, y_w \le 10^9)$, the coordinates of each point $w$.
+}
+
+
+\outputdesc{
+	For each point $w$:\\
+	\begin{itemize}
+		\item If there is no way to represent $w$ as described, print the word ``impossible'' (without the quotes).
+		\item If there is a solution, print a line with an integer $m$, indicating the amount of elements in $R$.
+	\end{itemize}
+	Then print $m$ lines, each of them with an integer $i$ indicating that the $i$\textit{-th} point of $P$ belongs to $R$, followed by a real number $\mu_i$ indicating its coefficient.\\
+
+	\textbf{Note}: Your solution will be considered correct if it follows all the described restrictions and the squared distance between $w$ and the point $w' = \displaystyle\sum_{i=1}^{|R|} {\mu}_i \cdot R_i$ does not exceed $10^{-5}$.
+
+}
+
+\sampleio

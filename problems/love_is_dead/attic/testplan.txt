@@ -1,0 +1,95 @@
+# This is a sample test plan
+# the first column specifies the test group
+# the second column specifies the command to be executed
+
+# Use samples as tests
+1     ; copy documents/sample-1.in
+
+# dcordb
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_yes
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+2     ; generator-dcordb.exe always_no
+
+# dgc
+3     ; generator.exe 5 5
+3     ; generator.exe 30 100
+3     ; generator.exe 30 99
+3     ; generator.exe 30 97
+3     ; generator.exe 30 94
+3     ; generator.exe 30 90
+3     ; generator.exe 30 85
+3     ; generator.exe 30 79
+3     ; generator.exe 30 72
+3     ; generator.exe 30 64
+3     ; generator.exe 30 55
+3     ; generator.exe 30 55
+3     ; generator.exe 30 54
+3     ; generator.exe 30 52
+3     ; generator.exe 30 49
+3     ; generator.exe 30 45
+3     ; generator.exe 30 40
+3     ; generator.exe 30 34
+3     ; generator.exe 30 27
+3     ; generator.exe 30 19
+3     ; generator.exe 70 3
+3     ; generator.exe 80 3
+3     ; generator.exe 90 3
+3     ; generator.exe 69 3
+3     ; generator.exe 45 5
+3     ; generator.exe 55 4
+3     ; generator.exe 100 100

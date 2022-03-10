@@ -1,0 +1,21 @@
+.DS_Store
+.vscode/
+
+# Ignore files generated from box
+
+*.exe
+*.desc
+*.pyc
+*.log
+*.class
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+*.pdf
+!problem-en.pdf
+!problem-es.pdf
+
+.build/
+build/

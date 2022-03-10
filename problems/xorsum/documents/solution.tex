@@ -1,0 +1,30 @@
+% Para adicionar uma imagem ou incluir um arquivo .tex você precisa 
+% adicionar \CWD
+% caminho relativo (ao documento principal) do diretório.
+% 
+% Exemplo:
+% \begin{figure}
+%   \includegraphics{\CWD/imagens/exemplo.pdf}
+% \end{figure}
+
+Let's say we have values $a, b, c$ consecutive in the given array and we want to change $b$ to maximize the value of $(a \oplus b) + (b \oplus c)$ (note that $b$ wont be involved in any other term of the summation for the whole array). Since $\oplus$ is a bitwise operator we can proceed independently for each bit. Let's say we have for some bit $i$ the values $0$ and $0$ in $a$ and $c$ respectively, then it's more convenient to set the $i-$\textit{th} bit of $b$ to $1$. The same way we can check all four cases and construct the best value of $b$ for a given pair $a, c$.  
+
+From the above statement we can get the best solution with only one changed element by just trying all possible triplets of consecutive elements.
+
+Let's suppose now we want to change two elements, there are two cases:
+\begin{enumerate}
+	\item The two elements are consecutive: 
+	
+		Consider the values $a, b, c, d$ consecutive in our array, this operation is similar to the previous described, with the difference that now we want to get $b$ and $c$, given a pair $a, d$ in order to maximize $(a \oplus b) + (b \oplus c) + (c \oplus d)$. It can be solved again by checking all four cases on $a$'s and $d$'s bits, and then trying all possible $4-$tuples of consecutive elements.
+	
+	\item The two elements are not consecutive: (we can change its values independently of each other)
+		
+		Let's say we calculate $pref(i)$ as the best result we can get by changing only one element in the positions from $1$ to $i$ (eg. the $i-$\textit{th} prefix). We can easily do this by using some simple \textit{Dynamic Programming} technique. 
+		
+		Then suppose we want to change element $j$ as the second element; we just need to check the triplet $A[j-1], A[j], A[j+1]$ (where $A$ denotes the array) as previously described and consider the value of $pref(j-2)$ (since they must not be consecutive) as our base value for the summation. 
+\end{enumerate}
+
+Overall complexity is $\mathcal{O}(n \cdot \log M)$ where $M$ is the maximum value among the array's elements. The $\log$ factor is included because we check all bits for each element. 
+
+\textbf{Note}: Special care need to be taken when changing elements in the first/last positions of the array.
+

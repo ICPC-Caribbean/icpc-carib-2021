@@ -1,0 +1,15 @@
+% Para adicionar uma imagem ou incluir um arquivo .tex você precisa 
+% adicionar \CWD
+% caminho relativo (ao documento principal) do diretório.
+% 
+% Exemplo:
+% \begin{figure}
+%   \includegraphics{\CWD/imagens/exemplo.pdf}
+% \end{figure}
+
+Given the function $h(n)=(-1)^n \cdot n \cdot p + k$, we are asked to find the smallest positive integer $x$ such that $h(x) \ge m$. There a two cases for n:
+\begin{itemize}
+\item When n is odd, the function is a decreasing linear function, since the factor $(-1)^n$ is equal to $-1$. The case $x = 1$ should always be tested, since it is the only odd x that can be a solution.
+
+\item When n is even, the function is an increasing linear function, since the factor $(-1)^n$ is equal to $1$. For $n=2s$, with $s\geq1$, we have that $h(2s) = 2s \cdot p + k$. From $h(2s) \ge m$ we can deduce that $s \ge \left \lceil \frac{m-k}{2 \cdot p} \right \rceil$. If $x = 1$ is not an answer, then the solution is $$max(2, 2 \cdot \left \lceil \frac{m-k}{2 \cdot p} \right \rceil).$$ We take the maximum with $2$ to avoid $0$ as a solution.
+\end{itemize}

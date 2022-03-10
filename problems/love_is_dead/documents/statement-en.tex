@@ -1,0 +1,44 @@
+There are $n$ cats and $n$ dogs, each numbered from $1$ to $n$. From their locations each of them can look other cats and dogs. In particular the following is happening:\\
+
+\begin{enumerate}
+  \item Every \textbf{cat} looks exactly $a$ \textbf{dogs} (ie. $a$ distinct integers from $1$ to $n$).
+  \item Every \textbf{dog} looks exactly $b$ \textbf{cats} (ie. $b$ distinct integers from $1$ to $n$).
+\end{enumerate}
+
+Something really bad will happen if a cat and a dog are looking to each other at the same time, so Koa the Koala will help to sort out this situation. She has to determine whether it is possible to arrange which are the target animals each animal is looking to in such a way that:\\
+
+\begin{itemize}
+  \item (1.) and (2.) are satisfied
+  \item there isn't a pair of \textbf{cat} and \textbf{dog} looking to each other, that is: there can't exists integers $i$ and $j$ ($1 \le i, j \le n$) such that cat $i$ is looking to dog $j$ and dog $j$ is looking to cat $i$.
+\end{itemize}
+
+Help her!
+
+\inputdesc{First line of the input contains one integer $t$ ($1 \le t \le 100$), the number of test cases. Then $t$ test cases follow.\\
+
+  The only line of each test case contains three integers $n$, $a$ and $b$ ($1 \le n \le 100 \, ;\,  1 \le a, b \le n$).\\
+
+  It is guaranteed that the sum of $n$ over all test cases does not exceed $100$ ($\sum n \le 100$).\\
+}
+
+\outputdesc{For each test case:
+
+  Print ``Yes'' or ``No'' (without quotes), depending on whether such arrangement exists.\\
+
+  If the answer is ``Yes'':\\
+
+  \begin{itemize}
+    \item Then exactly $n$ lines must follow, which dogs is looking each cat.
+
+    \item The $i$\textit{-th} ($1 \le i \le n$) line must consist of exactly $a$ distinct integers $w_1, w_2, \ldots, w_a$ ($1\le w_i \le n$) indicating that cat $i$ looks dogs $w_1, w_2, \ldots, w_a$. These integers can be in any order.
+
+    \item Then exactly $n$ lines must follow, which cats is looking each dog.
+
+    \item The $i$\textit{-th} ($1 \le i \le n$) line must consist of exactly $b$ distinct integers $m_1, m_2, \ldots, m_b$ \hbox{($1\le m_i\le n$)}, indicating that dog $i$ looks cats $m_1, m_2, \ldots, m_b$. These integers can be in any order.
+
+  \end{itemize}
+
+  If there are many possible arrangements print any.
+}
+
+\sampleio

@@ -1,0 +1,20 @@
+Se conocen los números enteros $n$ y $k$. Se desea calcular cuántos números enteros distintos $x$ $(1\le x \le n)$ pueden expresarse como el producto de $x_i$, tal que:
+\begin{itemize}
+  \item $x_1 + x_2 + \hdots + x_m = k $
+  \item $x_i \ge 1$ y $m \ge 1$
+\end{itemize}
+
+Por ejemplo, sea $n = 20$ y $k=8$, entonces:\\
+\begin{itemize}
+  \item Como $1+2+2+3 = 8$, el producto será $1 \cdot 2\cdot 2 \cdot 3 = 12$
+  \item Como $4+2+2=8$, el producto será $4\cdot 2\cdot 2  = 16$
+  \item Como $8=8$, el producto será $8=8$
+  \item Como $1+1+1+1+1+1+1+1 = 8$, el producto será $1\cdot1\cdot1\cdot1\cdot1\cdot1\cdot1\cdot1 = 1$
+\end{itemize}
+Por lo tanto los números 1, 12, 16, 8 y otros pueden ser obtenidos.
+
+\inputdesc{La primera línea contiene los números enteros $n$ y $k$ $(1\le n,k \le 1000)$.}
+
+\outputdesc{Imprima en una sola línea la respuesta del problema.}
+
+\sampleio

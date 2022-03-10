@@ -1,0 +1,45 @@
+El algoritmo \textit{LCS} (Subsecuencia Común más Larga) de dos cadenas binarias $A$ y $B$ devuelve una matriz de la siguiente manera:\\ \\
+
+\begin{minipage}{12cm}
+    \begin{verbatim}
+    LCS(A, B):
+        n = len(A)
+        m = len(B)
+        M = Array[n, m] // la matriz está llena de ceros
+
+        for i = 1 to n
+            for j = 1 to m
+                if A[i] == B[j]
+                    M[i][j] = M[i-1][j-1] + 1
+                else
+                    M[i][j] = max(M[i-1][j], M[i][j-1])
+        return M
+  \end{verbatim}
+\end{minipage}\\
+
+Dada una matriz $M$, encuentre el menor entre todos los pares posibles de cadenas binarias $A$ y $B$ tal que \textit{LCS(A, B)} devuelva la matriz $M$. Un par $(A, B)$ es menor que $(C, D)$ si $(A+B)$ es lexicográficamente menor que $(C+D)$ donde el operador $+$ denota la concatenación de cadenas.
+
+%
+% For input, use one of the following
+%
+
+\inputdesc{La primera línea de la entrada contiene dos números enteros $n$ y $m$ $(1 \le n, m \le 2 \cdot 10^3)$, el número de filas y el número de columnas en la matriz.\\
+
+    Las siguientes $n$ líneas contienen $m$ números enteros cada una. El elemento $j$\textit{-ésimo} en la línea $i$\textit{-ésima} es $M[i][j]$.\\
+
+    Se garantiza que existen al menos dos cadenas binarias tales que el algoritmo \textit{LCS} devuelve la matriz dada.\\
+
+    Tenga en cuenta que la matriz dada difiere de la del pseudocódigo al no tener la fila 0 y la columna 0 por simplicidad.\\
+}
+
+%
+% For output, use one of the following
+%
+
+\outputdesc{En la primera línea, imprima una cadena binaria $A$ de longitud $n$ y en la segunda línea, imprima una cadena binaria $B$ de longitud $m$ tal que el par $(A, B)$ sea el menor donde el algoritmo \textit{LCS} devuelve la matriz dada.}
+
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio

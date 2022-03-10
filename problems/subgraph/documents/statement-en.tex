@@ -1,0 +1,50 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{center}
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{center}
+
+You are given a weighted and undirected graph with $V$ vertices and $E$ edges. Each vertex has an associated weight $p_1, p_2, \ldots , p_V$.\\
+
+Find a subset $S$ of vertices with maximum score, where the score is defined as the sum of the weights of all nodes in $S$ and the weights of all the edges between nodes in $S$, divided by the number of vertices in $S$:\\
+
+\begin{equation*}
+    score(S) = \frac{\sum\limits_{u \in S} {p_u} + \sum\limits_{\substack{(u, v, w) \in E \\ u, v \in S}} {w}}{\lvert S \rvert}
+\end{equation*}
+
+
+%
+% For input, use one of the following
+%
+
+\inputdesc{
+    The first line contains two integers $V$ ($1 \le V \le 100$) and $E$ ($1 \le E \le 1000$).\\
+
+    The next line consist of $V$ integers $p_1, p_2, \ldots , p_V$ ($0 \le p_i \le 1000$).\\
+
+    Then $E$ lines, each containing three integers $u_i, v_i, w_i$ ($1 \le u_i \ne v_i \le V$, $1 \le w_i \le 1000$, $1 \le i \le E$) denoting an edge between nodes $u_i$ and $v_i$ with weight $w_i$.\\
+
+    \textbf{There will be at most one undirected edge between any pair of vertices.}
+}
+
+%
+% For output, use one of the following
+%
+
+\outputdesc{
+    Print a subset of vertices $S$ with maximum score as follows:\\
+
+    A line with an integer $\lvert S \rvert$, the number of vertices in $S$.\\
+
+    A line with $\lvert S \rvert$ integers separated by spaces: the vertices of $S$ in any order.\\
+
+    \textbf{If there's more than one subgraph with the maximum score, print any of them.}
+}
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio

@@ -1,0 +1,27 @@
+# This is a sample test plan
+# the first column specifies the test group
+# the second column specifies the command to be executed
+
+# Use samples as tests
+1     ; copy documents/sample-1.in
+
+# Use generators
+2     ; gen_random.exe random n=10 m=5 M=10
+2     ; gen_random.exe random n=10:20 m=30 M=1000
+2     ; gen_random.exe random n=10:100 m=200:500 M=1000
+2     ; gen_random.exe random n=10:100 m=200:500 M=1000
+2     ; gen_random.exe random n=50:100 m=500:1000 M=1000
+2     ; gen_random.exe random n=50:100 m=500:1000 M=1000
+2     ; gen_random.exe random n=50:100 m=500:1000 M=1000
+
+# Max tests
+3     ; gen_random.exe random n=100 m=1000 M=1000
+3     ; gen_random.exe random n=100 m=1000 M=1000
+3     ; gen_random.exe random n=100 m=1000 M=1000
+3     ; gen_random.exe random n=100 m=1000 M=1000
+
+# Anti-greedy tests
+4     ; copy attic/greedy1.in
+4     ; copy attic/greedy2.in
+4     ; copy attic/greedy3.in
+4     ; copy attic/greedy4.in

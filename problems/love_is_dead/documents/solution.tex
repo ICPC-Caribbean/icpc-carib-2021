@@ -1,0 +1,35 @@
+The first step to solve this problem is to determine when a solution exists.
+For this, it's helpful to analyse the problem as a graph, where cats create
+directed edges to dogs and viceversa.
+
+In particular the following happens:
+
+\begin{itemize}
+
+    \item each cat will add $a$ edges, and each dog will add $b$ edges, so in
+        any solution there will be $n \cdot a + n \cdot b$ edges.
+
+    \item the maximum amount of edges that can be created in any solution, such
+        that there is not a cat and a dog looking each other simultaneously, is
+        $n \cdot n$.
+
+\end{itemize}
+
+So, $n \cdot a + n \cdot b \le n \cdot n$ holds. Simplifying we get that $a + b
+\le n$. This is a necessary condition for the existence of a solution.
+
+With this in mind, let's create a construction to place the edges on the graph.
+The idea is: for every cat create $a$ edges to the following $a$ dogs
+cyclically (starting from 0 if we are on the last dog), more formally: the
+$i$-th cat will add edges to dogs $i \cdot a \mod n, (i \cdot a + 1) \mod n,
+\ldots, (i \cdot a + a - 1) \mod n$ (all indexes start from 0).
+
+To complete the construction, each dog $j$ will add exactly $b$ edges to cats
+$i$ such that the edge $(i, j)$ was not added on the step explained below. It
+turns out that each dog will be able to find the needed $b$ cats.
+
+To see this, note that the maximum in-degree of a dog needs to be at most $a$,
+if not, there were more than $n \cdot a$ edges added from cats. So, it follows
+that the amount of available cats for each dog is at least $n - a$, and by the
+inequality shown above $n - a \ge b$ (each dog will have enough cats to add
+edges to them).

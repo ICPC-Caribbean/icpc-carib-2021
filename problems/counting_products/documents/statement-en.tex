@@ -1,0 +1,25 @@
+You are given the integers $n$ and $k$. You want to calculate how many
+different integers $x$ $(1\le x \le n)$ can be obtained as a product of $x_i$
+such that:
+
+\begin{itemize}
+  \item $x_1 + x_2 + \cdots + x_m = k$
+  \item $x_i \ge 1$ and $m \ge 1$
+\end{itemize}
+
+As an example, assume that $n = 20$ and $k=8$, then:
+
+\begin{itemize}
+  \item As $1+2+2+3 = 8$, product will be $1 \cdot 2\cdot 2 \cdot 3 = 12$
+  \item As $4+2+2=8$, product will be $4\cdot 2\cdot 2  = 16$
+  \item As $8=8$, product will be $8=8$
+  \item As $1+1+1+1+1+1+1+1 = 8$, product will be $1\cdot1\cdot1\cdot1\cdot1\cdot1\cdot1\cdot1 = 1$
+\end{itemize}
+
+So 1, 12, 16, 8 and others can be obtained.
+
+\inputdesc{First line contains integers $n$ and $k$ $(1\le n,k \le 1000)$.}
+
+\outputdesc{On a single line print the answer to the problem.}
+
+\sampleio

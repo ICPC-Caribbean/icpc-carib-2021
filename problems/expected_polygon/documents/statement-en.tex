@@ -1,0 +1,23 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{center}
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{center}
+
+There are $n$ points in a plane. Each point will be removed with probability $0.5$ independently. Determine the expected value of the area of the \textit{convex hull} of the remaining points.\\
+
+\inputdesc{ The first line contains an integer $n$ $(1\le n\le 2000)$.\\
+
+    The next $n$ lines contain integer pairs $x_i$, $y_i$ $(-10^9\le x_i, y_i\le 10^9)$, the coordinates of the $i$\text{-th} point. No three points are collinear.
+}
+
+% Last sentence was taken from: https://codeforces.com/contest/935/problem/D
+\outputdesc{Print the expected value of the area of the \textit{convex hull}. Print the value $P \cdot Q^{-1} \mod (10^9+7)$, where $P$ and $Q$ are coprime and $\frac{P}{Q}$ is the answer to the problem. }
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio

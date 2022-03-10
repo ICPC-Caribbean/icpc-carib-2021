@@ -1,0 +1,44 @@
+# This is a sample test plan
+# the first column specifies the test group
+# the second column specifies the command to be executed
+
+# Use samples as tests
+1     ; copy documents/sample-1.in
+
+# Use generators
+2     ; gen_random.exe n=1 k=1
+2     ; gen_random.exe n=2 k=1
+2     ; gen_random.exe n=15 k=15
+2     ; gen_random.exe n=1000 k=1
+2     ; gen_random.exe n=1000 k=500
+2     ; gen_random.exe n=1 k=1000
+
+2     ; gen_random.exe n=1:1000 k=1:1000
+2     ; gen_random.exe n=1:1000 k=1:1000
+2     ; gen_random.exe n=1:1000 k=1:1000
+2     ; gen_random.exe n=1:1000 k=1:1000
+2     ; gen_random.exe n=1:1000 k=1:1000
+2     ; gen_random.exe n=1:1000 k=1:1000
+2     ; gen_random.exe n=1:1000 k=1:1000
+2     ; gen_random.exe n=1:1000 k=1:1000
+2     ; gen_random.exe n=1:1000 k=1:1000
+2     ; gen_random.exe n=1:1000 k=1:1000
+2     ; gen_random.exe n=1:1000 k=1:1000
+2     ; gen_random.exe n=1:1000 k=1:1000
+2     ; gen_random.exe n=1:1000 k=1:1000
+2     ; gen_random.exe n=1:1000 k=1:1000
+2     ; gen_random.exe n=1:1000 k=1:1000
+2     ; gen_random.exe n=1:1000 k=1:1000
+2     ; gen_random.exe n=1:1000 k=1:1000
+2     ; gen_random.exe n=1:1000 k=1:1000
+2     ; gen_random.exe n=1:1000 k=1:1000
+2     ; gen_random.exe n=500:1000 k=500:1000
+2     ; gen_random.exe n=500:1000 k=500:1000
+2     ; gen_random.exe n=500:1000 k=500:1000
+2     ; gen_random.exe n=500:1000 k=500:1000
+2     ; gen_random.exe n=500:1000 k=500:1000
+2     ; gen_random.exe n=500:1000 k=500:1000
+2     ; gen_random.exe n=500:1000 k=500:1000
+2     ; gen_random.exe n=500:1000 k=500:1000
+2     ; gen_random.exe n=500:1000 k=500:1000
+2     ; gen_random.exe n=1000 k=1000

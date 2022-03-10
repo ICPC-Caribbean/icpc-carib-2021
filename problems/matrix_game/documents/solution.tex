@@ -1,0 +1,18 @@
+% Para adicionar uma imagem ou incluir um arquivo .tex você precisa 
+% adicionar \CWD
+% caminho relativo (ao documento principal) do diretório.
+% 
+% Exemplo:
+% \begin{figure}
+%   \includegraphics{\CWD/imagens/exemplo.pdf}
+% \end{figure}
+
+The main observation that we have to make in order to solve this problem is that every game that Alice and Bob play can be interpreted as a classic Nim game, where a token placed in column $y$ represents a stone pile of size $y - 1$.
+
+To determine the winner of a Nim game, we have to calculate the nim-sum of the game, which is $a_1 \oplus a_2 \oplus a_3 \cdots \oplus a_n$, where $\oplus$ stands for the XOR logical operator and $a_1, a_2, \cdots, a_n$ are the sizes of the stone piles of the game. Alice wins if nim-sum is different from $0$, otherwise Bob wins.
+
+To solve the problem efficiently, we have to process games in non decreasing order of its value $r$. We maintain a variable $nimsum$, which holds the nim-sum value of games up to the current column $r$ we are analizing. Every time we find a token whose column $y$ lies in the range $[1, r]$ we make $nimsum = nimsum \oplus (y - 1)$. After that we just have to determine if $nimsum$ equals $0$ or not in order to find out the winner.
+
+We have to carefully print the answers of every game in the order given in the input.
+
+The time complexity of this approach is $O(c \log c)$.

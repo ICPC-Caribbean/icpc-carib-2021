@@ -1,0 +1,9 @@
+{
+    "name": {
+        "en": "Board Game",
+        "es": "Juego de Mesa"
+    },
+    "seconds": 1,
+    "memory": 1024,
+    "mog_id": 9676
+}

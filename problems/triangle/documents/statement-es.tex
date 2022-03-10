@@ -1,0 +1,34 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{center}
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{center}
+
+Son dadas las coordenadas de $n$ puntos en el plano y un conjunto de $m$ triángulos isorrectángulos (isósceles y rectángulos). Los catetos de estos triángulos son paralelos a los ejes de coordenadas.\\
+
+Por cada triángulo debe contar cuantos de los puntos de la entrada este contiene.
+
+%
+% For input, use one of the following
+%
+
+
+\inputdesc{La primera línea contiene dos números enteros positivos $n$ y $m$ $(1 \leq n,m \leq 10^5)$, la cantidad de puntos y la cantidad de triángulos, respectivamente.\\
+
+    La siguientes $n$ líneas contienen dos números enteros $x$ $y$ $(-10^9\le x,y \le 10^9)$, las coordenadas de cada uno de los puntos dados.\\
+
+    Las siguientes $m$ líneas contienen seis números enteros $x_1\ y_1\ x_2\ y_2\ x_3\ y_3$ $(-10^9\le x_1,y_1,x_2,y_2,x_3,y_3 \le 10^9)$, las coordenadas de los vértices de los triángulos dados.
+}
+%
+% For output, use one of the following
+%
+
+\outputdesc{Imprima $m$ números, la cantidad de puntos que contiene cada triángulo.}
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio
